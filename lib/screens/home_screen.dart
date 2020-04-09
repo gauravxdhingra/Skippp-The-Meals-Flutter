@@ -19,7 +19,10 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           onPressed: () {},
         ),
-        title: Text('Skippp The Meals'),
+        title: Text(
+          'Skippp The Meals',
+          style: TextStyle(fontSize: 20),
+        ),
         actions: <Widget>[
           FlatButton(
             onPressed: () {},
