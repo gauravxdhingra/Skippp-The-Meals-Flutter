@@ -120,9 +120,9 @@ class _NearbyRestaurantsState extends State<NearbyRestaurants> {
           child: Text(
             'Nearby Restaurants',
             style: TextStyle(
-              fontSize: 24,
+              fontSize: 25,
               fontWeight: FontWeight.w600,
-              letterSpacing: 1.2,
+              letterSpacing: 1.1,
             ),
           ),
         ),

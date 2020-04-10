@@ -108,7 +108,7 @@ class RecentOrders extends StatelessWidget {
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.w600,
-              letterSpacing: 1.2,
+              letterSpacing: 1.1,
             ),
           ),
         ),

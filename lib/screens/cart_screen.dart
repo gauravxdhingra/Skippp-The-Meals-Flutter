@@ -53,6 +53,58 @@ class _CartScreenState extends State<CartScreen> {
                           ),
                           overflow: TextOverflow.ellipsis,
                         ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          width: 100,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              width: 0.8,
+                              color: Colors.black54,
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              GestureDetector(
+                                child: Text(
+                                  '-',
+                                  style: TextStyle(
+                                    color: Theme.of(context).primaryColor,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                                onTap: () {},
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              GestureDetector(
+                                child: Text(
+                                  order.quantity.toString(),
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    // color: Theme.of(context).primaryColor,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                                onTap: () {},
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              Text(
+                                '+',
+                                style: TextStyle(
+                                  color: Theme.of(context).primaryColor,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -60,6 +112,18 @@ class _CartScreenState extends State<CartScreen> {
               ],
             ),
           ),
+          Container(
+            margin: EdgeInsets.all(10),
+            child: Text(
+              '\$${order.quantity * order.food.price}',
+              style: TextStyle(
+                fontSize: 16,
+                // color: Theme.of(context).primaryColor,
+                fontWeight: FontWeight.w600,
+              ),
+              overflow: TextOverflow.ellipsis,
+            ),
+          )
         ],
       ),
     );

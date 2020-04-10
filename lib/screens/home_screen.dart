@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
               'Cart (${currentUser.cart.length})',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 20,
+                fontSize: 18,
               ),
             ),
           ),
@@ -80,6 +80,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           RecentOrders(),
+          SizedBox(
+            height: 20,
+          ),
           NearbyRestaurants(),
         ],
       ),
