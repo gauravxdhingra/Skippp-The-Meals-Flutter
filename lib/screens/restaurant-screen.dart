@@ -17,6 +17,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
   _buildMenuItem(Food menuItem) {
     return Center(
       child: Stack(
+        alignment: Alignment.center,
         children: <Widget>[
           Container(
             height: 175,
@@ -28,8 +29,74 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 ),
                 fit: BoxFit.cover,
               ),
+              borderRadius: BorderRadius.circular(15),
             ),
-          )
+          ),
+          Container(
+            height: 175,
+            width: 175,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [
+                    Colors.black.withOpacity(0.3),
+                    Colors.black87.withOpacity(0.3),
+                    Colors.black54.withOpacity(0.3),
+                    Colors.black38.withOpacity(0.3),
+                  ],
+                  stops: [
+                    0.1,
+                    0.5,
+                    0.7,
+                    0.9,
+                  ]),
+            ),
+          ),
+          Positioned(
+            bottom: 65,
+            child: Column(
+              children: <Widget>[
+                Text(
+                  menuItem.name,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.2,
+                  ),
+                ),
+                Text(
+                  '\$${menuItem.price}',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.2,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Positioned(
+            bottom: 10,
+            right: 10,
+            child: Container(
+              // margin: EdgeInsets.only(right: 20),
+              width: 48,
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: IconButton(
+                icon: Icon(Icons.add),
+                onPressed: () {},
+                iconSize: 30,
+                color: Colors.white,
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -160,11 +227,15 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
           ),
           Expanded(
             child: GridView.count(
-                crossAxisCount: 2,
-                children: List.generate(widget.restautant.menu.length, (index) {
+              crossAxisCount: 2,
+              children: List.generate(
+                widget.restautant.menu.length,
+                (index) {
                   Food food = widget.restautant.menu[index];
                   return _buildMenuItem(food);
-                })),
+                },
+              ),
+            ),
           )
         ],
       ),
