@@ -13,7 +13,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(
@@ -46,6 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
         // centerTitle: true,
       ),
       body: ListView(
+        physics: BouncingScrollPhysics(),
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(20.0),
