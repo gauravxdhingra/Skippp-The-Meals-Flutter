@@ -35,13 +35,16 @@ class _NearbyRestaurantsState extends State<NearbyRestaurants> {
               children: <Widget>[
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15),
-                  child: Image(
-                    image: AssetImage(
-                      restaurant.imageUrl,
+                  child: Hero(
+                    tag: restaurant.imageUrl,
+                    child: Image(
+                      image: AssetImage(
+                        restaurant.imageUrl,
+                      ),
+                      height: 150,
+                      width: 150,
+                      fit: BoxFit.cover,
                     ),
-                    height: 150,
-                    width: 150,
-                    fit: BoxFit.cover,
                   ),
                 ),
                 Expanded(

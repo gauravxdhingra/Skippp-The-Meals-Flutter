@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Skippp The Meals',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.grey[50],
-        primaryColor: Colors.deepOrangeAccent,
+        primaryColor: Colors.deepOrange,
       ),
       home: HomeScreen(),
     );
