@@ -13,6 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(
@@ -42,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ],
-        centerTitle: true,
+        // centerTitle: true,
       ),
       body: ListView(
         children: <Widget>[
